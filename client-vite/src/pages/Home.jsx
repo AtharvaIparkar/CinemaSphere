@@ -122,38 +122,8 @@ const Home = ({ searchTerm }) => {
         <div id="featured-collection" className="bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-500 mb-4">Featured Collection</h2>
-            <p className="text-xl text-slate-600">Handpicked entertainment for every taste</p>
-          </div>
-          
-          {/* API Source Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <span className="text-white font-medium px-4 py-3">Filter by Source:</span>
-            <button
-              onClick={() => setSelectedSource('')}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedSource === '' 
-                  ? 'bg-purple-600 text-white shadow-lg' 
-                  : 'bg-white text-slate-600 hover:bg-purple-50 hover:text-purple-600 shadow-md'
-              }`}
-            >
-              All Sources
-            </button>
-            {sources.map(source => (
-              <button
-                key={source}
-                onClick={() => setSelectedSource(source)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedSource === source 
-                    ? (source === 'TMDB' ? 'bg-blue-600 text-white shadow-lg' 
-                       : source === 'OMDB' ? 'bg-yellow-600 text-white shadow-lg'
-                       : 'bg-green-600 text-white shadow-lg')
-                    : 'bg-white text-slate-600 hover:bg-gray-50 shadow-md'
-                }`}
-              >
-                {source}
-              </button>
-            ))}
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Featured Collection</h2>
+            <p className="text-xl text-slate-300">Handpicked entertainment for every taste</p>
           </div>
 
           {/* Genre Filter */}
@@ -185,10 +155,10 @@ const Home = ({ searchTerm }) => {
           </div>
 
           {filteredMovies.length === 0 ? (
-            <div className="text-center text-slate-500 py-20">
+            <div className="text-center text-slate-400 py-20">
               <div className="text-6xl mb-4">🔍</div>
-              <p className="text-2xl font-medium">No items found</p>
-              <p className="text-lg">Try adjusting your search criteria</p>
+              <p className="text-2xl font-medium text-white">No items found</p>
+              <p className="text-lg text-slate-300">Try adjusting your search criteria</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
