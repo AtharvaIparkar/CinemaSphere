@@ -152,6 +152,7 @@ const MovieDetail = () => {
                 </ServerButton>
               </div>
               <p className="text-gray-400 text-sm mt-2">
+                Kindly use the vipstream-B from the servers list to watch the movie.<br/>
                 Try different servers if one doesn't work. Enjoying the movie? Add it to your watchlist!
               </p>
             </div>
