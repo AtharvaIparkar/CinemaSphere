@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from '../components/MovieCard.jsx';
 import Loading from '../components/Loading.jsx';
-import { getApiUrl } from '../config/api.js';
 
 const Home = ({ searchTerm }) => {
   const [movies, setMovies] = useState([]);
@@ -23,7 +22,7 @@ const Home = ({ searchTerm }) => {
 
   const fetchMovies = async () => {
     try {
-      const response = await axios.get(getApiUrl('/movies'));
+      const response = await axios.get('/api/movies');
       setMovies(response.data);
       setFilteredMovies(response.data);
     } catch (error) {

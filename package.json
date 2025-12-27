@@ -10,7 +10,7 @@
     "client": "cd client-vite && npm run dev",
     "build": "cd client-vite && npm run build",
     "seed": "cd server && node seedData.js",
-    "vercel-build": "cd client-vite && npm install && npm run build"
+    "heroku-postbuild": "cd client-vite && npm install && npm run build"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.59.0",

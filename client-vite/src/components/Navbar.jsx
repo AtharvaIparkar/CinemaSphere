@@ -187,7 +187,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
         <div className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="bg-gradient-to-b from-black/95 to-slate-900/95 backdrop-blur-xl rounded-b-3xl border-t border-gradient-to-r from-red-600/30 to-orange-600/30 shadow-2xl">
+          <div className="bg-gradient-to-b from-black/95 via-slate-900/95 to-black/95 backdrop-blur-xl rounded-b-3xl border-t border-gradient-to-r from-red-600/30 to-orange-600/30 shadow-2xl">
             <div className="px-6 py-8 space-y-6">
               
               {/* Mobile Search */}
