@@ -59,8 +59,8 @@ const Home = ({ searchTerm }) => {
     <button
       onClick={onClick}
       className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${active
-          ? `bg-${color}-600 text-white shadow-lg transform scale-105 border-2 border-orange-400`
-          : 'bg-white text-slate-600 hover:bg-gray-50 hover:text-orange-600 shadow-md hover:shadow-lg border-2 border-transparent hover:border-orange-300'
+        ? `bg-${color}-600 text-white shadow-lg transform scale-105 border-2 border-orange-400`
+        : 'bg-white text-slate-600 hover:bg-gray-50 hover:text-orange-600 shadow-md hover:shadow-lg border-2 border-transparent hover:border-orange-300'
         }`}
     >
       {children}
@@ -170,7 +170,7 @@ const Home = ({ searchTerm }) => {
             {/* Genre Filter */}
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
               <span className="text-white font-medium px-2 sm:px-4 py-2 sm:py-3 text-sm sm:text-base">
-                Filter by Genre:
+                Filter by Genre :
               </span>
               <FilterButton
                 active={selectedGenre === ''}
