@@ -3,14 +3,30 @@
     "buildCommand": "cd client-vite && npm install && npm run build",
     "outputDirectory": "client-vite/dist",
     "framework": null,
-    "rewrites": [
+    "functions": {
+        "api/**/*.js": {
+            "runtime": "@vercel/node@3"
+        }
+    },
+    "routes": [
         {
-            "source": "/api/:path*",
-            "destination": "/api/:path*"
+            "src": "/api/movies/([^/]+)",
+            "dest": "/api/movies/[id].js"
         },
         {
-            "source": "/(.*)",
-            "destination": "/"
+            "src": "/api/movies",
+            "dest": "/api/movies/index.js"
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
         }
     ],
     "headers": [
