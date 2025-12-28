@@ -2,17 +2,18 @@
     "version": 2,
     "buildCommand": "cd client-vite && npm install && npm run build",
     "outputDirectory": "client-vite/dist",
-    "routes": [
+    "rewrites": [
         {
-            "handle": "filesystem"
+            "source": "/api/movies/:id",
+            "destination": "/api/movies/[id]"
         },
         {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
+            "source": "/api/movies",
+            "destination": "/api/movies"
         },
         {
-            "src": "/(.*)",
-            "dest": "/index.html"
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
